@@ -1,0 +1,132 @@
+:root {
+  --purple: #5600d9;
+  --pink: #d900aa;
+  --blue: #0078d9;
+  --red: #D90000;
+  --orange: #FF8C00;
+  --teal: #04756F;
+  --gray: #666;
+  --black: #111;
+  --white: #fff;
+
+  --lightpurple: #ddccf7;
+  --lightpink: #f7ccee;
+  --lightblue: #cce4f7;
+  --lightred: #f7cccc;
+  --lightorange: #ffe8cc;
+  --lightteal: #cde3e2;
+  --lightgray: #d6d6d6;
+
+  --fontHeading: 'Poppins', sans-serif;
+  --fontNaviation: 'Roboto', sans-serif;;
+}
+
+/*General_______________*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  margin: 0;
+  font-size: 16px;
+}
+
+header{
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  background-color: var(--white);
+}
+
+main{
+
+}
+
+section{
+height: 100vh;
+}
+/*_______________General*/
+
+
+/*Typograpy_______________*/
+h1,h2,h3{
+  font-family: var(--fontHeading);
+}
+
+nav a{
+  font-family: var(--fontNaviation);
+  font-size: 0.9375rem;
+  font-weight: 100;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+/*_______________Typograpy*/
+
+
+/*Navigation_______________*/
+.navwrapp{
+  max-width: 1180px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.navigation{
+  height: 100px;
+  display: flex;
+  align-items: stretch;
+}
+
+nav a {
+	padding: 0 20px;
+  display: flex;
+  align-items: center;
+
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+nav a.active {
+  padding-top: 30px;
+  color: var(--orange);
+  background-image: -webkit-linear-gradient(90deg, #ffe8cc, #fff 45%);
+  background-image: linear-gradient(0deg, #ffe8cc, #fff 45%);
+  border-bottom: 3px solid var(--orange);
+}
+
+nav a:hover {
+  padding-top: 10px;
+  color: var(--yellow);
+  border-bottom: 3px solid var(--black);
+}
+
+/*_______________Navigation*/
+
+
+.intro{
+  background-color: var(--lightpurple);
+}
+.first{
+  background-color: var(--lightorange);
+}
+.second{
+  background-color: var(--lightblue);
+}
+.third{
+  background-color: var(--lightteal);
+}
+.fourth{
+  background-color: var(--lightteal);
+}
+.fifth{
+  background-color: var(--lightgrey);
+}
