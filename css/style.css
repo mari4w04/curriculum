@@ -206,7 +206,7 @@ main{
   border-bottom: 1px solid var(--purple);
 }
 .boxRed{
-  color: var(--white);
+  color: var(--purple);
   background-color: var(--red);
 }
 /*_______________Section Header Box*/
