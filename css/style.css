@@ -2,12 +2,14 @@
   --purple: #5600d9;
   --pink: #d900aa;
   --blue: #0078d9;
-  --red: #D90000;
   --orange: #FF8C00;
+  --red: #D90000;
   --teal: #04756F;
+
   --gray: #666;
   --black: #111;
   --white: #fff;
+  ---whitesmoke: whitesmoke;
 
   --lightpurple: #ddccf7;
   --lightpink: #f7ccee;
@@ -15,10 +17,11 @@
   --lightred: #f7cccc;
   --lightorange: #ffe8cc;
   --lightteal: #cde3e2;
-  --lightgray: #d6d6d6;
 
+/*Font Family*/
   --fontHeading: 'Poppins', sans-serif;
-  --fontNaviation: 'Roboto', sans-serif;;
+  --fontNavigation: 'Roboto', sans-serif;
+  --fontParagraph: 'Libre Baskerville', serif;
 }
 
 /*General_______________*/
@@ -30,6 +33,7 @@
 body{
   margin: 0;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased!important;
 }
 
 header{
@@ -37,14 +41,16 @@ header{
   height: 100px;
   width: 100vw;
   background-color: var(--white);
+  z-index: 100;
 }
 
 main{
-
+  max-width: 1680px;
+  margin: auto;
 }
 
 section{
-height: 100vh;
+  height: 100vh;
 }
 /*_______________General*/
 
@@ -55,7 +61,7 @@ h1,h2,h3{
 }
 
 nav a{
-  font-family: var(--fontNaviation);
+  font-family: var(--fontNavigation);
   font-size: 0.9375rem;
   font-weight: 100;
   text-decoration: none;
@@ -63,18 +69,20 @@ nav a{
   color: var(--black);
 }
 
+p{
+  font-family: var(--fontParagraph);
+}
 /*_______________Typograpy*/
 
 
-/*Navigation_______________*/
+/*Navigation Desktop_______________*/
 .navwrapp{
-  max-width: 1180px;
+  max-width: 1120px;
   height: 100px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--white);
 }
 
 .navigation{
@@ -84,7 +92,7 @@ nav a{
 }
 
 nav a {
-	padding: 0 20px;
+	padding: 0 18px;
   display: flex;
   align-items: center;
 
@@ -97,36 +105,174 @@ nav a {
 
 nav a.active {
   padding-top: 30px;
-  color: var(--orange);
-  background-image: -webkit-linear-gradient(90deg, #ffe8cc, #fff 45%);
-  background-image: linear-gradient(0deg, #ffe8cc, #fff 45%);
-  border-bottom: 3px solid var(--orange);
+  border-bottom: 5px solid var(--orange);
 }
 
 nav a:hover {
   padding-top: 10px;
-  color: var(--yellow);
-  border-bottom: 3px solid var(--black);
+  border-bottom: 5px solid var(--black);
 }
-
-/*_______________Navigation*/
+/*_______________Navigation Desktop*/
 
 
-.intro{
-  background-color: var(--lightpurple);
+/*Main Padding_______________*/
+main{
+  padding-left: calc(0rem + ((1vw - 3.85px) * 3.861)); /*0-50*/
+  padding-right: calc(0rem + ((1vw - 3.85px) * 3.861)); /*0-50*/
 }
-.first{
-  background-color: var(--lightorange);
+/*_______________Main Padding*/
+
+
+/*SectionContainer_______________*/
+.resethigh{
+  height: auto;
 }
-.second{
-  background-color: var(--lightblue);
+
+.SectionContentWrapp{
+  max-width: 1120px;
+  margin: auto;
+  padding: 100px 0 100px 0;
+  background-color: var(--white);
+  border-bottom: 10px solid var(---whitesmoke);
 }
-.third{
-  background-color: var(--lightteal);
+
+.sectionTextContainer{
+  max-width: 1120px;
+  margin: auto;
+  padding: 25px 0 25px 0;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: auto;
 }
-.fourth{
-  background-color: var(--lightteal);
+  h1, p{
+    grid-column: 2/12;
+  }
+/*_______________SectionContainer*/
+
+
+
+/*Colorbox_______________*/
+.colorbox{
+  height: 100vh;
+  width: 40vw;
+  max-width: 800px;
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(90deg, #d66221, #c05757);
+  filter: saturate(200%) brightness(200%);
+  opacity: 0.5;
 }
-.fifth{
-  background-color: var(--lightgrey);
+/*_______________Colorbox*/
+
+
+
+/*Section Intro Content_______________*/
+.sectionIntroContent{
+  max-width: 1120px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+/*_______________Section Intro Content*/
+
+
+/*Intro Header Box_______________*/
+.introHeaderBox{
+  padding: 20px;
+  z-index: 3;
+  border-left: 10px solid var(--orange);
+  background-color: var(--white);
+
+  grid-column: 1/-1;
+  grid-row: 6;
+}
+/*_______________Intro Header Box*/
+
+
+
+/*Section Header Box_______________*/
+.sectionHeaderBox{
+  height: 100px;
+  margin: 40px 0 40px;
+  grid-column: 2/11;
+  display: grid;
+  align-items: center;
+}
+
+.boxPurple{
+  color: var(--purple);
+  background-color: var(--white);
+  border-bottom: 1px solid var(--purple);
+}
+.boxRed{
+  color: var(--white);
+  background-color: var(--red);
+}
+/*_______________Section Header Box*/
+
+
+/*Semester Wrapp_______________*/
+.semesterWrapp{
+  grid-column: 2/11;
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.semesterBox{
+  height: 60px;
+  width: 60px;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--lightpurple);
+	background: var(--purple);
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+/*_______________Semester Wrapp*/
+
+
+.home{
+  background-image: url(../images/intro.png);
+  background-position: 20% 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-left: calc(0.625rem + ((1vw - 3.6px) * 1.5152)) solid var(--orange);  /*10-30*/
+  padding-right: calc(0.625rem + ((1vw - 3.6px) * 1.5152)); /*10-30*/
+  /*background-color: var(--lightorange);*/
+}
+.generalInfo{
+  border-left: calc(0.625rem + ((1vw - 3.6px) * 1.5152)) solid var(--purple);  /*10-30*/
+  padding-right: calc(0.625rem + ((1vw - 3.6px) * 1.5152)); /*10-30*/
+  background-color: var(---whitesmoke);
+  /*background-color: var(--lightpurple);*/
+}
+.CoreAreas{
+  border-left: calc(0.625rem + ((1vw - 3.6px) * 1.5152)) solid var(--pink);  /*10-30*/
+  padding-right: calc(0.625rem + ((1vw - 3.6px) * 1.5152)); /*10-30*/
+  background-color: var(---whitesmoke);
+  /*background-color: var(--lightpink);*/
+}
+.Exams{
+  border-left: calc(0.625rem + ((1vw - 3.6px) * 1.5152)) solid var(--blue);  /*10-30*/
+  padding-right: calc(0.625rem + ((1vw - 3.6px) * 1.5152)); /*10-30*/
+  background-color: var(---whitesmoke);
+  /*background-color: var(--lightblue);*/
+}
+.Internship{
+  border-left: calc(0.625rem + ((1vw - 3.6px) * 1.5152)) solid var(--red);  /*10-30*/
+  padding-right: calc(0.625rem + ((1vw - 3.6px) * 1.5152)); /*10-30*/
+  background-color: var(---whitesmoke);
+  /*background-color: var(--lightred);*/
+}
+.StudyAbroad{
+  border-left: calc(0.625rem + ((1vw - 3.6px) * 1.5152)) solid var(--teal);  /*10-30*/
+  padding-right: calc(0.625rem + ((1vw - 3.6px) * 1.5152)); /*10-30*/
+  background-color: var(---whitesmoke);
+  /*background-color: var(--lightteal);*/
 }
