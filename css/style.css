@@ -207,7 +207,7 @@ main{
 }
 .boxRed{
   color: var(--white);
-  background-color: var(--red);
+  background-color: var(--pink);
 }
 /*_______________Section Header Box*/
 
