@@ -158,7 +158,7 @@ main{
   max-width: 800px;
   position: absolute;
   z-index: 1;
-  background-image: linear-gradient(90deg, #d66221, #c05757);
+  /*background-image: linear-gradient(90deg, #d66221, #c05757);*/
   filter: saturate(200%) brightness(200%);
   opacity: 0.5;
 }
