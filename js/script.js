@@ -7,6 +7,16 @@
  * Released under the MIT license.
 */
 
+$("#demo01").animatedModal();
+$("#demo02").animatedModal({modalTarget:'modal2'});
+$("#demo03").animatedModal({modalTarget:'modal3'});
+$("#demo04").animatedModal({modalTarget:'modal4'});
+
+$("#exam1").animatedModal({modalTarget:'exam-modal1'});
+$("#exam2").animatedModal({modalTarget:'exam-modal2'});
+$("#exam3").animatedModal({modalTarget:'exam-modal3'});
+$("#exam4").animatedModal({modalTarget:'exam-modal4'});
+
 window.slide = new SlideNav();
 
 
@@ -101,3 +111,6 @@ function mouseover6(){
 function mouseout06() {
   linkcolor6.style.color = "#111";
 }
+
+
+
