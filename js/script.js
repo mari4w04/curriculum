@@ -101,3 +101,24 @@ function mouseover6(){
 function mouseout06() {
   linkcolor6.style.color = "#111";
 }
+
+
+/*Burger Menu*/
+(function() {
+    var div = document.querySelector("#menu-button");
+    document.querySelector("#menu-button")
+        .addEventListener("click", function(haho) {
+            haho.preventDefault();
+            this.classList.toggle("menuopen");
+            if (this.classList.contains("menuopen")) {
+                div.classList.remove("menuclose");
+                div.classList.add("menuopen");
+                document.getElementById("container").style.animation = "open 1.2s forwards 1";
+            } else {
+                div.classList.remove("menuopen");
+                div.classList.add("menuclose");
+                document.getElementById("container").style.animation = "close 1.2s forwards 1";
+            }
+        });
+
+}());
