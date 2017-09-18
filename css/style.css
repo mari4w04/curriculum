@@ -75,7 +75,15 @@ p{
 /*_______________Typograpy*/
 
 
-/*Navigation Desktop_______________*/
+/*Main Padding_______________*/
+main, header{
+  padding-left: calc(0rem + ((1vw - 3.85px) * 3.861)); /*0-50*/
+  padding-right: calc(0rem + ((1vw - 3.85px) * 3.861)); /*0-50*/
+}
+/*_______________Main Padding*/
+
+
+/*Burger Navihgation_______________*/
 .navwrapp{
   max-width: 1120px;
   height: 100px;
@@ -86,41 +94,133 @@ p{
 }
 
 .navigation{
-  height: 100px;
-  display: flex;
-  align-items: stretch;
+  display: none;
 }
 
-nav a {
-	padding: 0 18px;
+#wrapp{
+  width: 100vw;
+  height: 100vh;
+  background-color: pink;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
-
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-ms-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
 }
 
-nav a.active {
-  padding-top: 30px;
-  border-bottom: 5px solid var(--orange);
+#container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: #191747;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-nav a:hover {
-  padding-top: 10px;
-  border-bottom: 5px solid var(--black);
+@-webkit-keyframes open {
+    from {top: 0px;}
+    to {top: 400px;}
 }
-/*_______________Navigation Desktop*/
+
+@-webkit-keyframes close {
+    from {top: 400px;}
+    to {top: 0px;}
+}
 
 
-/*Main Padding_______________*/
-main{
-  padding-left: calc(0rem + ((1vw - 3.85px) * 3.861)); /*0-50*/
-  padding-right: calc(0rem + ((1vw - 3.85px) * 3.861)); /*0-50*/
+#menu-button {
+	position: absolute;
+	z-index: 1000;
+	top: 30px;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	outline: none;
+  background: none;
 }
-/*_______________Main Padding*/
+
+
+#menu-button #top,
+#menu-button #center,
+#menu-button #bottom {
+	background: white;
+    border-radius: 3px;
+}
+
+#menu-button #top,
+#menu-button #bottom {
+	content: '';
+	position: absolute;
+
+	left: 0;
+	width: 100%;
+	height: 3px;
+	pointer-events: none;
+
+}
+
+#menu-button span {
+	position: absolute;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 3px;
+}
+
+#menu-button #top {
+	-webkit-transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+	transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1);
+}
+
+#menu-button #bottom {
+	-webkit-transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+	transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1);
+}
+
+#menu-button:hover #top{
+  animation: topline 200ms ease both;
+}
+
+@keyframes topline {
+  from { transform: translate3d(0, -10px, 0) scale3d(0.8, 1, 1); }
+  to   { transform: translate3d(0, -10px, 0) scale3d(1, 1, 1);}
+}
+
+#menu-button:hover #bottom{
+  animation: bottomline 200ms ease both;
+}
+
+@keyframes bottomline {
+  from { transform: translate3d(0, 10px, 0) scale3d(0.8, 1, 1); }
+  to   { transform: translate3d(0, 10px, 0) scale3d(1, 1, 1);}
+}
+
+
+.menuopen{
+  animation: openmenu 200ms ease both;
+}
+
+@keyframes openmenu {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(90deg);}
+}
+
+.menuclose{
+  animation: closemenu 200ms ease both;
+}
+
+@keyframes closemenu {
+  from { transform: rotate(90deg); }
+  to   { transform: rotate(0deg);}
+}
+
+
+/*_______________Burger Navigation*/
+
+
 
 
 /*SectionContainer_______________*/
@@ -275,4 +375,46 @@ main{
   padding-right: calc(0.625rem + ((1vw - 3.6px) * 1.5152)); /*10-30*/
   background-color: var(---whitesmoke);
   /*background-color: var(--lightteal);*/
+}
+
+
+@media screen and (min-width: 992px){
+  /*Navigation Desktop_______________*/
+  .navwrapp{
+    max-width: 1120px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navigation{
+    height: 100px;
+    display: flex;
+    align-items: stretch;
+  }
+
+  nav a {
+  	padding: 0 18px;
+    display: flex;
+    align-items: center;
+
+  	-webkit-transition: all 0.2s ease-out;
+  	-moz-transition: all 0.2s ease-out;
+  	-ms-transition: all 0.2s ease-out;
+  	-o-transition: all 0.2s ease-out;
+  	transition: all 0.2s ease-out;
+  }
+
+  nav a.active {
+    padding-top: 30px;
+    border-bottom: 5px solid var(--orange);
+  }
+
+  nav a:hover {
+    padding-top: 10px;
+    border-bottom: 5px solid var(--black);
+  }
+  /*_______________Navigation Desktop*/
 }
