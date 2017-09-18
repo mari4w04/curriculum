@@ -173,10 +173,11 @@ main, header{
   grid-template-rows: auto;
 }
 
-.full-width-container{
-    width: 100%;
+.full-with-cont{
     display: block;
+    width: 100%;
 }
+
   h1, p{
     grid-column: 2/12;
     
@@ -366,7 +367,7 @@ main, header{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.core-areas-title{
+.modal-block-title{
     grid-column: 1/12;
     margin-bottom: 20px;
 }
