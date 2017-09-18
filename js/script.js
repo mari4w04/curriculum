@@ -28,12 +28,12 @@ linkcolor1.addEventListener("mouseout", mouseout01);
 
 function mouseover01(){
   console.log("mouseoverFunction");
-  linkcolor1.style.color = "#111";
+  linkcolor1.style.color = "#333";
   linkcolor1.style.borderBottomColor = "#FF8C00";
 }
 
 function mouseout01() {
-  linkcolor1.style.color = "#111";
+  linkcolor1.style.color = "#333";
 }
 
 
@@ -44,12 +44,12 @@ linkcolor2.addEventListener("mouseout", mouseout02);
 
 function mouseover02(){
   console.log("mouseoverFunction");
-  linkcolor2.style.color = "#111";
+  linkcolor2.style.color = "#333";
   linkcolor2.style.borderBottomColor = "#5600d9";
 }
 
 function mouseout02() {
-  linkcolor2.style.color = "#111";
+  linkcolor2.style.color = "#333";
 }
 
 /*Link03*/
@@ -59,12 +59,12 @@ linkcolor3.addEventListener("mouseout", mouseout03);
 
 function mouseover3(){
   console.log("mouseoverFunction");
-  linkcolor3.style.color = "#111";
+  linkcolor3.style.color = "#333";
   linkcolor3.style.borderBottomColor = "#d900aa";
 }
 
 function mouseout03() {
-  linkcolor3.style.color = "#111";
+  linkcolor3.style.color = "#333";
 }
 
 /*Link04*/
@@ -74,12 +74,12 @@ linkcolor4.addEventListener("mouseout", mouseout04);
 
 function mouseover4(){
   console.log("mouseoverFunction");
-  linkcolor4.style.color = "#111";
+  linkcolor4.style.color = "#333";
   linkcolor4.style.borderBottomColor = "#0078d9";
 }
 
 function mouseout04() {
-  linkcolor4.style.color = "#111";
+  linkcolor4.style.color = "#333";
 }
 
 /*Link05*/
@@ -89,12 +89,12 @@ linkcolor5.addEventListener("mouseout", mouseout05);
 
 function mouseover5(){
   console.log("mouseoverFunction");
-  linkcolor5.style.color = "#111";
+  linkcolor5.style.color = "#333";
   linkcolor5.style.borderBottomColor = "#D90000";
 }
 
 function mouseout05() {
-  linkcolor5.style.color = "#111";
+  linkcolor5.style.color = "#333";
 }
 
 /*Link06*/
@@ -104,12 +104,12 @@ linkcolor6.addEventListener("mouseout", mouseout06);
 
 function mouseover6(){
   console.log("mouseoverFunction");
-  linkcolor6.style.color = "#111";
+  linkcolor6.style.color = "#333";
   linkcolor6.style.borderBottomColor = "#04756F";
 }
 
 function mouseout06() {
-  linkcolor6.style.color = "#111";
+  linkcolor6.style.color = "#333";
 }
 
 
