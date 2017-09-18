@@ -144,6 +144,10 @@ main{
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: auto;
 }
+.full-width-container{
+    width: 100%;
+    display: block;
+}
   h1, p{
     grid-column: 2/12;
   }
@@ -858,7 +862,7 @@ Javascript disabled
 }
 
 .modal-column{
-    width: 73vw;
+    width: 100%;
     height: 70vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -928,6 +932,7 @@ Javascript disabled
   height: 20px;
   position: relative;
   overflow: hidden;
+    cursor: pointer;
 }
 .close-button-block:before, .close-button-block:after {
   content: '';
