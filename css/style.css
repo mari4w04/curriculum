@@ -178,6 +178,9 @@ main, header{
     width: 100%;
 }
 
+  h1, p{
+    grid-column: 2/12;
+    
   h1, h2, h3, p, ul, li{
     grid-column: 2/10;
   }
